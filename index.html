@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080809">
+  <meta name="description" content="KINETIC is an interactive motion playground exploring movement, typography and digital interaction.">
+  <meta property="og:title" content="KINETIC® — Motion is a language.">
+  <meta property="og:description" content="Explore six interactive motion experiments and build your own rhythm.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>KINETIC® — Motion is a language.</title>
+  <!-- Local stylesheet keeps the page fully styled when opened without a server. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-fill"></span></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor cursor-dot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Kinetic home"><span class="brand-mark">K</span><span>KINETIC<span class="registered">®</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#experiments">Experiments</a>
+      <a href="#scroll-story">Scroll story</a>
+      <a href="#motion-lab">Motion lab</a>
+      <a href="#principles">Principles</a>
+    </nav>
+    <div class="header-right">
+      <button class="availability" id="motion-toggle" type="button" aria-label="Disable animated motion" aria-pressed="true"><i></i> <span id="motion-mode-label">PLAY MODE: ON</span></button>
+      <a class="header-cta magnetic" href="#experiments">Explore <span>↗</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="hero-topline eyebrow"><span>INDEPENDENT MOTION PLAYGROUND</span><span>EST. 2026 / VOL. 001</span></div>
+      <div class="hero-content">
+        <div class="hero-kicker"><span class="red-dash"></span> AN EXPERIMENT IN MOVEMENT</div>
+        <h1 id="hero-title" class="hero-title" aria-label="Motion is a language.">
+          <span class="title-line title-line-one">MOTION</span>
+          <span class="title-line title-line-two"><span class="outline-word">IS A</span> <span class="red-word">LANGUAGE.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-description">A digital playground for curious minds.<br>Move things. Break patterns. Find your rhythm.</p>
+          <a class="round-link magnetic" href="#experiments" aria-label="Explore experiments"><span>↓</span></a>
+          <div class="hero-index"><span>SCROLL TO EXPLORE</span><span class="index-line"></span><span>00 — 06</span></div>
+        </div>
+      </div>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-crosshair crosshair-one" aria-hidden="true">+</div>
+      <div class="hero-crosshair crosshair-two" aria-hidden="true">+</div>
+      <div class="hero-side-note">DESIGN / MOTION / INTERACTION</div>
+    </section>
+
+    <section class="marquee-band" aria-label="Motion is a language">
+      <div class="marquee-track"><span>MOVE WITH INTENTION <b>✳</b> BREAK THE STATIC <b>✳</b> MAKE IT FEEL ALIVE <b>✳</b> MOVE WITH INTENTION <b>✳</b> BREAK THE STATIC <b>✳</b> MAKE IT FEEL ALIVE <b>✳</b></span></div>
+    </section>
+
+    <section class="manifesto section-shell" id="manifesto">
+      <div class="section-heading"><span class="section-number">01 / THE IDEA</span><span class="section-rule"></span><span class="section-meta">A NOTE ON MOVEMENT</span></div>
+      <div class="manifesto-layout">
+        <p class="manifesto-label">NOT JUST<br><span>DECORATION.</span></p>
+        <div class="manifesto-copy">
+          <h2>Motion gives digital things <em>meaning.</em></h2>
+          <p>It guides attention, creates emotion and turns an interface into an experience. KINETIC is a space to explore that language — one interaction at a time.</p>
+          <a class="text-link" href="#principles">Explore the principles <span>↗</span></a>
+        </div>
+      </div>
+      <div class="manifesto-stamp" aria-hidden="true"><span>FEEL<br>THE<br>SHIFT</span><b>✳</b></div>
+    </section>
+
+    <section class="experiments section-shell" id="experiments">
+      <div class="section-heading"><span class="section-number">02 / THE PLAYGROUND</span><span class="section-rule"></span><span class="section-meta">CHOOSE YOUR EXPERIMENT</span></div>
+      <div class="experiments-intro">
+        <h2>Six ways to<br><span>make it move.</span></h2>
+        <p>Each experiment is a small study in interaction. Hover, click, scroll and play. There's no wrong way to explore.</p>
+      </div>
+      <div class="experiment-filters" role="group" aria-label="Filter experiments">
+        <button class="filter-button is-active" data-filter="all" aria-pressed="true">ALL <span id="experiment-count">06</span></button>
+        <button class="filter-button" data-filter="type" aria-pressed="false">TYPE</button>
+        <button class="filter-button" data-filter="pointer" aria-pressed="false">POINTER</button>
+        <button class="filter-button" data-filter="scroll" aria-pressed="false">SCROLL</button>
+        <button class="filter-button" data-filter="space" aria-pressed="false">SPACE</button>
+      </div>
+      <div class="experiment-grid" id="experiment-grid">
+        <article class="experiment-card card-type" data-category="type" data-number="01">
+          <div class="card-visual type-visual">
+            <div class="visual-label">TYPE / 001</div>
+            <div class="type-playground" id="type-playground"><span>K</span><span>I</span><span>N</span><span>E</span><span>T</span><span>I</span><span>C</span></div>
+            <button class="visual-action type-trigger" type="button">PLAY TYPE <span>↗</span></button>
+          </div>
+          <div class="card-info"><div><span class="card-number">01</span><h3>Type Shift</h3></div><span class="card-category">KINETIC TYPOGRAPHY</span></div>
+          <p>Letters with a life of their own. Trigger a sequence and watch the type find its rhythm.</p>
+        </article>
+
+        <article class="experiment-card card-magnetic" data-category="pointer" data-number="02">
+          <div class="card-visual magnetic-visual" id="magnetic-playground">
+            <div class="visual-label">POINTER / 002</div>
+            <div class="magnetic-target magnetic-target-large">MOVE<br><span>ME</span></div>
+            <div class="magnetic-target magnetic-target-small">+</div>
+            <div class="magnetic-orbit"></div>
+            <span class="magnetic-hint">MOVE YOUR CURSOR</span>
+          </div>
+          <div class="card-info"><div><span class="card-number">02</span><h3>Magnetic Field</h3></div><span class="card-category">POINTER INTERACTION</span></div>
+          <p>A responsive field of elements that lean, follow and react to your presence.</p>
+        </article>
+
+        <article class="experiment-card card-scroll" data-category="scroll" data-number="03">
+          <div class="card-visual scroll-visual">
+            <div class="visual-label">SCROLL / 003</div>
+            <div class="scroll-stack"><span>SCROLL</span><span>TO</span><span>REVEAL<span class="red-period">.</span></span></div>
+            <div class="scroll-progress-demo"><span></span></div>
+            <span class="scroll-visual-note">A STORY IN MOTION</span>
+            <button class="visual-action scroll-trigger" type="button">VIEW STORY <span>↗</span></button>
+          </div>
+          <div class="card-info"><div><span class="card-number">03</span><h3>Scroll Story</h3></div><span class="card-category">SCROLL CHOREOGRAPHY</span></div>
+          <p>Build a narrative through pinned scenes, scrubbed timelines and scroll-led reveals.</p>
+        </article>
+
+        <article class="experiment-card card-grid" data-category="space" data-number="04">
+          <div class="card-visual grid-visual">
+            <div class="visual-label">LAYOUT / 004</div>
+            <div class="elastic-grid" id="elastic-grid">
+              <span class="grid-tile tile-red"></span><span class="grid-tile"></span><span class="grid-tile"></span><span class="grid-tile"></span><span class="grid-tile tile-red"></span><span class="grid-tile"></span><span class="grid-tile"></span><span class="grid-tile"></span><span class="grid-tile"></span>
+            </div>
+            <button class="visual-action grid-trigger" type="button">RESHUFFLE <span>↻</span></button>
+          </div>
+          <div class="card-info"><div><span class="card-number">04</span><h3>Elastic Grid</h3></div><span class="card-category">LAYOUT TRANSITION</span></div>
+          <p>Watch a rigid grid become fluid with responsive rearrangement and playful transitions.</p>
+        </article>
+
+        <article class="experiment-card card-orbit" data-category="space" data-number="05">
+          <div class="card-visual orbit-visual" id="orbital-playground">
+            <div class="visual-label">SPACE / 005</div>
+            <svg class="orbital-svg" viewBox="0 0 400 280" role="img" aria-label="Animated orbital geometry">
+              <circle class="orbit-path orbit-path-one" cx="200" cy="140" r="82"/>
+              <ellipse class="orbit-path orbit-path-two" cx="200" cy="140" rx="145" ry="48" transform="rotate(-28 200 140)"/>
+              <ellipse class="orbit-path orbit-path-three" cx="200" cy="140" rx="145" ry="48" transform="rotate(52 200 140)"/>
+              <circle class="orbit-core" cx="200" cy="140" r="17"/>
+              <circle class="orbit-node node-one" cx="282" cy="140" r="7"/>
+              <circle class="orbit-node node-two" cx="75" cy="93" r="5"/>
+              <circle class="orbit-node node-three" cx="120" cy="228" r="6"/>
+            </svg>
+            <span class="orbit-caption">A SYSTEM IN MOTION</span>
+          </div>
+          <div class="card-info"><div><span class="card-number">05</span><h3>Orbital Motion</h3></div><span class="card-category">SVG / GEOMETRY</span></div>
+          <p>Explore a tiny universe of rotating forms, connected paths and pointer-driven movement.</p>
+        </article>
+
+        <article class="experiment-card card-easing" data-category="type" data-number="06">
+          <div class="card-visual easing-visual">
+            <div class="visual-label">TIMING / 006</div>
+            <div class="easing-track"><span class="easing-ball"></span></div>
+            <div class="easing-labels"><span>START</span><span>FINISH</span></div>
+            <button class="visual-action easing-trigger" type="button">RUN MOTION <span>↗</span></button>
+          </div>
+          <div class="card-info"><div><span class="card-number">06</span><h3>Easing Lab</h3></div><span class="card-category">TIMING / EASING</span></div>
+          <p>Compare the character of motion by changing duration, easing and stagger.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scroll-story section-shell" id="scroll-story">
+      <div class="section-heading"><span class="section-number">03 / SCROLL CHOREOGRAPHY</span><span class="section-rule"></span><span class="section-meta">A STORY IN THREE MOVES</span></div>
+      <div class="story-track">
+        <div class="story-sticky">
+          <div class="story-copy">
+            <span class="eyebrow"><span class="red-dash"></span> MOTION HAS A PURPOSE</span>
+            <div class="story-scenes" aria-live="polite">
+              <article class="story-scene is-active" data-scene="0">
+                <span class="story-scene-index">SCENE 01 / ANTICIPATION</span>
+                <h2>BEFORE<br>THE <em>MOVE.</em></h2>
+                <p>Every meaningful interaction begins with a signal. A pause, a hint, a little tension before the action.</p>
+              </article>
+              <article class="story-scene" data-scene="1">
+                <span class="story-scene-index">SCENE 02 / TRANSFORMATION</span>
+                <h2>LET IT<br><em>CHANGE.</em></h2>
+                <p>Movement creates connection. Elements respond, relationships shift and the interface becomes alive.</p>
+              </article>
+              <article class="story-scene" data-scene="2">
+                <span class="story-scene-index">SCENE 03 / RESOLUTION</span>
+                <h2>LAND WITH<br><em>INTENT.</em></h2>
+                <p>The best motion knows when to stop. A clear arrival makes every movement feel considered.</p>
+              </article>
+            </div>
+            <div class="story-meter">
+              <span id="story-current">01</span><span class="story-meter-line"><i id="story-progress-fill"></i></span><span>03</span>
+            </div>
+          </div>
+          <div class="story-stage" role="img" aria-label="Abstract animated composition representing anticipation, transformation and resolution.">
+            <div class="story-stage-grid" aria-hidden="true"></div>
+            <div class="story-orbit story-orbit-a" aria-hidden="true"></div>
+            <div class="story-orbit story-orbit-b" aria-hidden="true"></div>
+            <div class="story-shape story-shape-a" aria-hidden="true"></div>
+            <div class="story-shape story-shape-b" aria-hidden="true"></div>
+            <div class="story-shape story-shape-c" aria-hidden="true"></div>
+            <div class="story-stage-word story-word-a">FEEL</div>
+            <div class="story-stage-word story-word-b">THE</div>
+            <div class="story-stage-word story-word-c">SHIFT<span>.</span></div>
+            <span class="story-stage-caption">KINETIC STUDY / 001—003</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="motion-lab section-shell" id="motion-lab">
+      <div class="section-heading"><span class="section-number">04 / TAKE CONTROL</span><span class="section-rule"></span><span class="section-meta">INTERACTIVE MOTION LAB</span></div>
+      <div class="lab-layout">
+        <div class="lab-intro">
+          <span class="eyebrow"><span class="red-dash"></span> YOUR TURN</span>
+          <h2>Find your<br><span>own rhythm.</span></h2>
+          <p>Change the parameters. Run the sequence. See how timing transforms the same movement into something entirely different.</p>
+          <div class="lab-status"><i></i><span id="lab-status-text" aria-live="polite">READY TO PLAY</span></div>
+        </div>
+        <div class="lab-panel">
+          <div class="lab-panel-top"><span>LIVE MOTION TEST</span><span>MOTION / CONTROL_01</span></div>
+          <div class="lab-stage" id="lab-stage">
+            <div class="lab-stage-grid" aria-hidden="true"></div>
+            <div class="lab-objects" aria-hidden="true"><span class="lab-object object-one"></span><span class="lab-object object-two"></span><span class="lab-object object-three"></span><span class="lab-object object-four"></span><span class="lab-object object-five"></span></div>
+            <div class="stage-corner stage-corner-tl">X: 000</div><div class="stage-corner stage-corner-br">Y: 000</div>
+          </div>
+          <div class="lab-controls">
+            <div class="control-row"><label for="duration-control">DURATION <output id="duration-output">1.2s</output></label><input id="duration-control" aria-label="Animation duration" type="range" min="0.3" max="3" value="1.2" step="0.1"></div>
+            <div class="control-row"><label for="stagger-control">STAGGER <output id="stagger-output">0.12s</output></label><input id="stagger-control" aria-label="Animation stagger" type="range" min="0" max="0.5" value="0.12" step="0.01"></div>
+            <div class="control-row control-select-row"><label for="ease-control">EASING</label><select id="ease-control" aria-label="Animation easing"><option value="power3.out">Power 3 Out</option><option value="expo.out">Expo Out</option><option value="back.out(1.4)">Back Out</option><option value="elastic.out(1, 0.4)">Elastic Out</option><option value="circ.inOut">Circ In Out</option><option value="none">Linear</option></select></div>
+            <div class="lab-actions"><button class="button button-primary" id="run-motion" type="button">RUN SEQUENCE <span>↗</span></button><button class="button button-secondary" id="pause-motion" type="button">PAUSE</button><button class="button button-secondary" id="replay-motion" type="button">REPLAY</button><button class="button button-secondary" id="reset-motion" type="button">RESET</button></div>
+            <div class="lab-code">
+              <div class="lab-code-heading"><span>LIVE CONFIGURATION</span><button class="copy-config" id="copy-config" type="button">COPY CONFIG ↗</button></div>
+              <pre><code id="motion-config">gsap.to(objects, { duration: 1.2, stagger: 0.12, ease: "power3.out" });</code></pre>
+              <span class="copy-feedback" id="copy-feedback" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles section-shell" id="principles">
+      <div class="section-heading"><span class="section-number">05 / THE LANGUAGE</span><span class="section-rule"></span><span class="section-meta">MOTION PRINCIPLES</span></div>
+      <div class="principles-heading"><h2>Small details.<br><span>Big difference.</span></h2><p>Good motion is not about moving everything. It's about making every movement matter.</p></div>
+      <div class="principle-list">
+        <article class="principle-item"><span class="principle-index">01</span><h3>Timing</h3><p>How long a movement takes changes how it feels.</p><span class="principle-symbol">↗</span></article>
+        <article class="principle-item"><span class="principle-index">02</span><h3>Easing</h3><p>Acceleration and deceleration give motion its personality.</p><span class="principle-symbol">⌁</span></article>
+        <article class="principle-item"><span class="principle-index">03</span><h3>Stagger</h3><p>A sequence creates rhythm, hierarchy and anticipation.</p><span class="principle-symbol">⋯</span></article>
+        <article class="principle-item"><span class="principle-index">04</span><h3>Choreography</h3><p>Individual movements become a coherent experience.</p><span class="principle-symbol">✳</span></article>
+      </div>
+    </section>
+
+    <section class="closing section-shell">
+      <div class="closing-grid" aria-hidden="true"></div>
+      <span class="eyebrow"><span class="red-dash"></span> END OF TRANSMISSION</span>
+      <h2>DON'T JUST<br><span>WATCH IT.</span><br>MOVE IT<span class="red-period">.</span></h2>
+      <a class="closing-link magnetic" href="#top">BACK TO THE TOP <span>↑</span></a>
+      <div class="closing-orb" aria-hidden="true"></div>
+    </section>
+    </main>
+
+  <footer class="site-footer section-shell">
+    <a class="brand" href="#top"><span class="brand-mark">K</span><span>KINETIC<span class="registered">®</span></span></a>
+    <span class="footer-note">A STUDY IN MOVEMENT / BUILT TO EXPLORE</span>
+    <span class="footer-copy">© 2026 KINETIC PLAYGROUND</span>
+  </footer>
+
+  <nav class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true" inert>
+    <a href="#experiments">Experiments <span>01</span></a>
+    <a href="#scroll-story">Scroll story <span>02</span></a>
+    <a href="#motion-lab">Motion lab <span>03</span></a>
+    <a href="#principles">Principles <span>04</span></a>
+  </nav>
+
+  <!-- Optional GSAP enhancement. Offline, the native Web Animations fallback works. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
