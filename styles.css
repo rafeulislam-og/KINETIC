@@ -25,7 +25,7 @@
 .site-header{position:sticky}
 .site-footer{position:relative}
 .footer-note{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;white-space:nowrap}
-.footer-signature{position:absolute;left:80%;top:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);width:110px;height:auto;max-width:30%;pointer-events:none}
+.footer-signature{position:absolute;left:auto;top:50%;right:6px;bottom:auto;transform:translateY(-50%);width:110px;height:auto;max-width:30%;pointer-events:none}
 @media(max-width:620px){.footer-note{position:static;transform:none;align-self:center;text-align:center;white-space:normal}}
 /* Contain decorative hero orbits so they never expand the mobile viewport. */
 @media(max-width:620px){.hero{overflow:hidden}}
