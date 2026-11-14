@@ -25,6 +25,7 @@
 .site-header{position:sticky}
 .site-footer{position:relative}
 .footer-note{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;white-space:nowrap}
+.footer-signature{position:absolute;right:0;bottom:5px;width:clamp(72px,13vw,160px);height:auto;max-width:30%;pointer-events:none}
 @media(max-width:620px){.footer-note{position:static;transform:none;align-self:center;text-align:center;white-space:normal}}
 /* Contain decorative hero orbits so they never expand the mobile viewport. */
 @media(max-width:620px){.hero{overflow:hidden}}
